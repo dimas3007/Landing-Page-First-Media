@@ -1,0 +1,352 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.beranda {
+  width: 100%;
+  height: 90vh;
+  background-color: #021B79;
+  position: relative;
+  color: #fcf9f9;
+  padding: 1em 1.5em;
+}
+.beranda .header {
+  width: 100%;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.beranda .header .brand {
+  font-weight: bold;
+  font-size: 2em;
+  cursor: pointer;
+}
+.beranda .header .nav-list {
+  display: flex;
+  gap: 2em;
+}
+.beranda .header .nav-list .nav-link {
+  cursor: pointer;
+  font-weight: 500;
+}
+.beranda .header .btn-bordered {
+  padding: 0.7em 1.2em;
+  background-color: transparent;
+  border: 0.2em solid #fcf9f9;
+  border-radius: 2em;
+  color: #fcf9f9;
+  font-weight: 500;
+  font-size: 1.2em;
+}
+.beranda .hero {
+  width: 100%;
+  height: 70%;
+  position: relative;
+  display: flex;
+  gap: 1em;
+  justify-content: space-between;
+  align-items: center;
+}
+.beranda .hero-desc {
+  flex: 1 1 0px;
+}
+.beranda .hero-desc h1 {
+  margin: 0.7em 0;
+  font-size: 3em;
+}
+.beranda .hero-desc p {
+  margin: 0.7em 0;
+  font-size: 2em;
+}
+.beranda .hero-desc .btn-primary {
+  margin: 0.7em 0;
+  background-color: orange;
+  padding: 0.7em 2em;
+  border: 0;
+  border-radius: 2em;
+  color: #fcf9f9;
+  font-weight: 500;
+  font-size: 1.2em;
+}
+.beranda .hero-img {
+  flex: 1 1 0px;
+}
+
+.tentang {
+  width: 100%;
+  padding: 2em 1.5em;
+  position: relative;
+}
+.tentang .tentang-desc {
+  display: flex;
+  gap: 1em;
+}
+.tentang .tentang-desc .img {
+  width: 100%;
+  height: 10em;
+  flex: 1 1 0px;
+  background-color: #00C6F1;
+  border-radius: 1em;
+}
+.tentang .tentang-desc .desc {
+  flex: 1 1 0px;
+}
+.tentang .tentang-desc .desc h4 {
+  margin: 0.3em 0 0.1em 0;
+  color: #00C6F1;
+  font-weight: 600;
+}
+.tentang .tentang-desc .desc h3 {
+  margin-bottom: 0.5rem;
+  color: #021B79;
+  font-weight: 700;
+}
+.tentang .tentang-desc .desc p {
+  color: #373737;
+  text-align: justify;
+  font-size: 0.93em;
+}
+.tentang .unggulan {
+  position: relative;
+  margin-top: 2.5em;
+}
+.tentang .unggulan .unggulan-title {
+  text-align: center;
+}
+.tentang .unggulan .unggulan-title h3 {
+  font-weight: 600;
+  color: #373737;
+  margin-bottom: 0.3em;
+}
+.tentang .unggulan .unggulan-title p {
+  color: #373737;
+  font-size: 0.93em;
+}
+.tentang .unggulan .unggulan-desc {
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+}
+.tentang .unggulan .unggulan-desc .unggulan-item {
+  flex: 1 1 0px;
+}
+.tentang .unggulan .unggulan-desc .unggulan-item h4 {
+  color: #373737;
+  font-weight: 600;
+  margin-bottom: 0.3em;
+}
+.tentang .unggulan .unggulan-desc .unggulan-item p {
+  font-size: 0.93em;
+}
+.tentang .unggulan .unggulan-desc .unggulan-item .img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 1.5em;
+  margin-top: 1.5em;
+}
+.tentang .unggulan .unggulan-desc .unggulan-item .img img {
+  width: 20%;
+  height: 20%;
+}
+
+.harga {
+  position: relative;
+  padding: 2em 1.5em;
+  background-color: #F1F1F1;
+}
+.harga .paket-list {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+.harga .harga-title {
+  text-align: center;
+}
+.harga .harga-title h3 {
+  font-weight: 600;
+  color: #373737;
+  margin-bottom: 0.3em;
+}
+.harga .harga-title p {
+  color: #373737;
+  font-size: 0.93em;
+}
+.harga .paket {
+  background-color: #fcf9f9;
+  border-radius: 1em;
+  position: relative;
+}
+.harga .paket .paket-title {
+  padding: 0.7em 0em;
+  text-align: center;
+  background-color: #021B79;
+  color: #fcf9f9;
+  border-radius: 1em 1em 0 0;
+}
+.harga .paket .paket-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5em;
+}
+.harga .paket .paket-main .paket-global {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.harga .paket .paket-main .paket-global .paket-harga {
+  position: relative;
+  display: flex;
+  gap: 0.3em;
+  align-items: center;
+}
+.harga .paket .paket-main .paket-global .paket-harga h3 {
+  color: #021B79;
+  font-size: 2em;
+}
+.harga .paket .paket-main .paket-global p {
+  color: #373737;
+  font-size: 0.8em;
+}
+.harga .paket .paket-main .upto {
+  position: relative;
+  width: 7em;
+  height: 7em;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 0.3em solid #021B79;
+}
+.harga .paket .paket-main .upto p {
+  color: #373737;
+}
+.harga .paket .paket-main .upto h4 {
+  color: #021B79;
+  font-size: 2em;
+}
+.harga .paket .paket-main .upto h6 {
+  color: #373737;
+  font-weight: 600;
+  font-size: 0.8em;
+}
+.harga .paket .paket-main .divider {
+  margin: 1em 0;
+  width: 90%;
+  border-top: 0.15em solid #021B79;
+}
+.harga .paket .paket-main .desc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8em;
+}
+.harga .paket .paket-main .desc li {
+  color: #021B79;
+  font-weight: 600;
+}
+.harga .paket .paket-main .paket-pilih {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.harga .paket .paket-main .paket-pilih button {
+  margin: 0.7em 0;
+  background-color: orange;
+  padding: 0.7em 2em;
+  border: 0;
+  border-radius: 2em;
+  color: #fcf9f9;
+  font-weight: 500;
+  font-size: 1.2em;
+  display: block;
+  width: 90%;
+}
+
+.hubungi {
+  padding: 2em 1.5em;
+  background-color: #021B79;
+  color: #fcf9f9;
+  text-align: center;
+}
+.hubungi h1 {
+  font-weight: bold;
+  font-size: 1.7em;
+}
+.hubungi h3 {
+  margin: 0.3em 0 0.7em 0;
+  font-weight: 500;
+  font-size: 1em;
+}
+.hubungi h5 {
+  font-weight: 500;
+  font-size: 1.2em;
+}
+.hubungi .btn-bordered {
+  padding: 0.5em 1.5em;
+  background-color: transparent;
+  border: 0.2em solid #fcf9f9;
+  border-radius: 2em;
+  color: #fcf9f9;
+  font-weight: 700;
+  font-size: 2em;
+  margin-top: 0.5em;
+}
+
+footer .legal-wrap {
+  padding: 1em 1.5em;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1em;
+}
+footer .legal-wrap .legal-disclaimer {
+  text-align: center;
+  flex-grow: 1;
+}
+footer .legal-wrap .legal-disclaimer button {
+  margin: 0.7em 0;
+  background-color: orange;
+  padding: 0.7em 2em;
+  border: 0;
+  border-radius: 2em;
+  color: #fcf9f9;
+  font-weight: 500;
+  font-size: 1.2em;
+}
+footer .legal-wrap img {
+  width: 50%;
+  height: 50%;
+}
+footer p {
+  padding: 0 1.5em;
+  font-size: 0.95em;
+  color: #373737;
+}
+footer .footer {
+  text-align: center;
+  background-color: #F1F1F1;
+  padding: 1em 0 1em 0;
+  margin-top: 1.5em;
+  color: #373737;
+  font-size: 0.8em;
+}
+
+/*# sourceMappingURL=style.css.map */
