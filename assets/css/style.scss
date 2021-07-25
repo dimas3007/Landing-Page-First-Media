@@ -3,8 +3,9 @@
 $black: #373737;
 $gray: #F1F1F1;
 $blue-dark: #021B79;
-$blue-light: #00C6F1;
+$blue-light: #0085A2;
 $white: #fcf9f9;
+$orange: #ff960f;
 
 * {
   padding: 0;
@@ -21,10 +22,15 @@ button{
   cursor: pointer;
 }
 
+.bg-white{
+  background-color: $white !important;
+}
+
 .beranda {
   width: 100%;
-  height: 90vh;
-  background-color: $blue-dark;
+  height: 100vh;
+  background: $blue-dark;
+  background: linear-gradient(90deg, $blue-dark 0%, $blue-light 100%);
   position: relative;
   color: $white;
   padding: 1em 1.5em;
@@ -38,6 +44,14 @@ button{
       font-weight: bold;
       font-size: 2em;
       cursor: pointer;
+      &:hover{
+        color: $orange;
+        transition: ease-in-out .3s;
+      }
+      &:active{
+        color: $orange;
+        transform: translateY(.3em);
+      }
     }
     .nav-list{
       display: flex;
@@ -45,6 +59,14 @@ button{
       .nav-link{
         cursor: pointer;
         font-weight: 500;
+        &:hover{
+          color: $orange;
+          transition: ease-in-out .3s;
+        }
+        &:active{
+          color: $orange;
+          transform: translateY(.3em);
+        }
       }
     }
     .btn-bordered{
@@ -54,15 +76,26 @@ button{
       border-radius: 2em;
       color: $white;
       font-weight: 500;
-      font-size: 1.2em;
+      font-size: 1em;
+      &:hover{
+        border: .2em solid $orange;
+        color: $orange;
+        transition: ease-in-out .3s;
+      }
+      &:active{
+        border: .2em solid $orange;
+        color: $orange;
+        box-shadow: 0px 0px 7px 0px $white;
+        transform: translateY(.3em);
+      }
     }
   }
   .hero {
     width: 100%;
-    height: 70%;
+    height: 90%;
     position: relative;
     display: flex;
-    gap: 1em;
+    gap: 2em;
     justify-content: space-between;
     align-items: center;
   }
@@ -78,36 +111,60 @@ button{
     }
     .btn-primary{
       margin: .7em 0;
-      background-color: orange;
+      border: .2em solid $orange;
+      background-color: $orange;
       padding: .7em 2em;
-      border: 0;
       border-radius: 2em;
       color: $white;
       font-weight: 500;
       font-size: 1.2em;
+      &:hover{
+        background-color: transparent;
+        border: .2em solid $orange;
+        color: $orange;
+        transition: ease-in-out .3s;
+      }
+      &:active{
+        box-shadow: 0px 0px 7px 0px $white;
+        transform: translateY(.3em);
+      }
     }
   }
   .hero-img{
     flex: 1 1 0px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    img{
+      width: 80%;
+      height: auto;
+      transform: rotate(-10deg);
+      //filter: drop-shadow( 3px 3px 2px rgb(255, 165, 0));
+    }
   }
 }
 
 .tentang{
   width: 100%;
-  padding: 2em 1.5em;
   position: relative;
   .tentang-desc{
+    padding: 2em 1.5em;
     display: flex;
+    justify-content: center;
     gap: 1em;
     .img{
-      width: 100%;
-      height: 10em;
-      flex: 1 1 0px;
-      background-color: #00C6F1;
-      border-radius: 1em;
+      width: 60%;
+      img{
+        border-radius: 1em;
+        width: 100%;
+        height: auto;
+        max-height: 23.4em;
+        max-width: 29em;
+      }
     }
     .desc{
-      flex: 1 1 0px;
+      width: 100%;
+      height: auto;
       h4{
         margin: .3em 0 .1em 0;
         color: $blue-light;
@@ -122,32 +179,35 @@ button{
         color: $black;
         text-align: justify;
         font-size: .93em;
+        width: 60%;
       }
     }
   }
   .unggulan{
     position: relative;
-    margin-top: 2.5em;
+    background-color: $blue-dark;
+    color: $white;
+    padding: 2em 1.5em;
     .unggulan-title{
       text-align: center;
       h3{
         font-weight: 600;
-        color: $black;
+        color: $orange;
         margin-bottom: .3em;
       }
       p{
-        color: $black;
         font-size: .93em;
       }
     }
     .unggulan-desc{
+      margin-top: 1em;
       display: flex;
       justify-content: space-between;
       gap: 1em;
       .unggulan-item{
         flex: 1 1 0px;
         h4{
-          color: $black;
+          color: $orange;
           font-weight: 600;
           margin-bottom: .3em;
         }
@@ -162,7 +222,9 @@ button{
           margin-top: 1.5em;
           img{
             width: 20%;
-            height: 20%;
+            height: auto;
+            max-width: 4.6em;
+            max-height: 4.6em;
           }
         }
       }
@@ -174,13 +236,9 @@ button{
   position: relative;
   padding: 2em 1.5em;
   background-color: $gray;
-  .paket-list{
-    display: flex;
-    justify-content: center;
-    gap: 1em;
-  }
   .harga-title{
     text-align: center;
+    margin-bottom: 2em;
     h3{
       font-weight: 600;
       color: $black;
@@ -191,95 +249,111 @@ button{
       font-size: .93em;
     }
   }
-  .paket{
-    background-color: $white;
-    border-radius: 1em;
-    position: relative;
-    .paket-title{
-      padding: .7em 0em;
-      text-align: center;
-      background-color: $blue-dark;
-      color: $white;
-      border-radius: 1em 1em 0 0;
-    }
-    .paket-main{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 1.5em;
-      .paket-global{
-        position: relative;
+  .paket-list{
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    .paket{
+      flex: 1 1 0px;
+      background-color: $white;
+      border-radius: 1em;
+      position: relative;
+      box-shadow: 0px 0px 5px 0px $black;
+      .paket-title{
+        padding: .7em 0em;
+        text-align: center;
+        background-color: $blue-dark;
+        color: $white;
+        border-radius: 1em 1em 0 0;
+      }
+      .paket-main{
         display: flex;
         flex-direction: column;
         align-items: center;
-        .paket-harga{
+        padding: 1.5em;
+        .paket-global{
           position: relative;
           display: flex;
-          gap: .3em;
+          flex-direction: column;
           align-items: center;
-          h3{
+          .paket-harga{
+            position: relative;
+            display: flex;
+            gap: .3em;
+            align-items: center;
+            h3{
+              color: $blue-dark;
+              font-size: 2em;
+            }
+          }
+          p{
+            color: $black;
+            font-size: .8em;
+          }
+        }
+        .upto{
+          margin: 1em;
+          position: relative;
+          width: 7em;
+          height: 7em;
+          border-radius: 50%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          border: .3em solid $blue-dark;
+          p{
+            color: $black;
+          }
+          h4{
             color: $blue-dark;
             font-size: 2em;
           }
+          h6{
+            color: $black;
+            font-weight: 600;
+            font-size: .8em;
+          }
         }
-        p{
-          color: $black;
-          font-size: .8em;
-        }
-      }
-      .upto{
-        position: relative;
-        width: 7em;
-        height: 7em;
-        border-radius: 50%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        border: .3em solid $blue-dark;
-        p{
-          color: $black;
-        }
-        h4{
-          color: $blue-dark;
-          font-size: 2em;
-        }
-        h6{
-          color: $black;
-          font-weight: 600;
-          font-size: .8em;
-        }
-      }
-      .divider{
-        margin: 1em 0;
-        width: 90%;
-        border-top: .15em solid $blue-dark;
-      }
-      .desc{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: .8em;
-        li{
-          color: $blue-dark;
-          font-weight: 600;
-        }
-      }
-      .paket-pilih{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        button{
-          margin: .7em 0;
-          background-color: orange;
-          padding: .7em 2em;
-          border: 0;
-          border-radius: 2em;
-          color: $white;
-          font-weight: 500;
-          font-size: 1.2em;
-          display: block;
+        .divider{
+          margin: 1em 0;
           width: 90%;
+          border-top: .15em solid $blue-dark;
+        }
+        .desc{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: .8em;
+          li{
+            color: $blue-dark;
+            font-weight: 600;
+          }
+        }
+        .paket-pilih{
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          button{
+            margin-top: 1.5em;
+            border: .2em solid $orange;
+            background-color: $orange;
+            padding: .7em 3em;
+            border-radius: 2em;
+            color: $white;
+            font-weight: 500;
+            font-size: 1em;
+            &:hover{
+              background-color: transparent;
+              border: .2em solid $orange;
+              color: $orange;
+              transition: ease-in-out .3s;
+            }
+            &:active{
+              box-shadow: 0px 0px 7px 0px $white;
+              transform: translateY(.3em);
+            }
+          }
         }
       }
     }
@@ -313,6 +387,17 @@ button{
     font-weight: 700;
     font-size: 2em;
     margin-top: .5em;
+    &:hover{
+      border: .2em solid $orange;
+      color: $orange;
+      transition: ease-in-out .3s;
+    }
+    &:active{
+      border: .2em solid $orange;
+      color: $orange;
+      box-shadow: 0px 0px 7px 0px $white;
+      transform: translateY(.3em);
+    }
   }
 }
 
@@ -329,13 +414,23 @@ footer{
       flex-grow: 1;
       button{
         margin: .7em 0;
-        background-color: orange;
+        border: .2em solid $orange;
+        background-color: $orange;
         padding: .7em 2em;
-        border: 0;
         border-radius: 2em;
         color: $white;
         font-weight: 500;
         font-size: 1.2em;
+        &:hover{
+          background-color: transparent;
+          border: .2em solid $orange;
+          color: $orange;
+          transition: ease-in-out .3s;
+        }
+        &:active{
+          box-shadow: 0px 0px 7px 0px $white;
+          transform: translateY(.3em);
+        }
       }
     }
     img{

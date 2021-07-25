@@ -14,10 +14,15 @@ button {
   cursor: pointer;
 }
 
+.bg-white {
+  background-color: #fcf9f9 !important;
+}
+
 .beranda {
   width: 100%;
-  height: 90vh;
-  background-color: #021B79;
+  height: 100vh;
+  background: #021B79;
+  background: linear-gradient(90deg, #021B79 0%, #0085A2 100%);
   position: relative;
   color: #fcf9f9;
   padding: 1em 1.5em;
@@ -34,6 +39,14 @@ button {
   font-size: 2em;
   cursor: pointer;
 }
+.beranda .header .brand:hover {
+  color: #ff960f;
+  transition: ease-in-out 0.3s;
+}
+.beranda .header .brand:active {
+  color: #ff960f;
+  transform: translateY(0.3em);
+}
 .beranda .header .nav-list {
   display: flex;
   gap: 2em;
@@ -42,6 +55,14 @@ button {
   cursor: pointer;
   font-weight: 500;
 }
+.beranda .header .nav-list .nav-link:hover {
+  color: #ff960f;
+  transition: ease-in-out 0.3s;
+}
+.beranda .header .nav-list .nav-link:active {
+  color: #ff960f;
+  transform: translateY(0.3em);
+}
 .beranda .header .btn-bordered {
   padding: 0.7em 1.2em;
   background-color: transparent;
@@ -49,14 +70,25 @@ button {
   border-radius: 2em;
   color: #fcf9f9;
   font-weight: 500;
-  font-size: 1.2em;
+  font-size: 1em;
+}
+.beranda .header .btn-bordered:hover {
+  border: 0.2em solid #ff960f;
+  color: #ff960f;
+  transition: ease-in-out 0.3s;
+}
+.beranda .header .btn-bordered:active {
+  border: 0.2em solid #ff960f;
+  color: #ff960f;
+  box-shadow: 0px 0px 7px 0px #fcf9f9;
+  transform: translateY(0.3em);
 }
 .beranda .hero {
   width: 100%;
-  height: 70%;
+  height: 90%;
   position: relative;
   display: flex;
-  gap: 1em;
+  gap: 2em;
   justify-content: space-between;
   align-items: center;
 }
@@ -73,40 +105,63 @@ button {
 }
 .beranda .hero-desc .btn-primary {
   margin: 0.7em 0;
-  background-color: orange;
+  border: 0.2em solid #ff960f;
+  background-color: #ff960f;
   padding: 0.7em 2em;
-  border: 0;
   border-radius: 2em;
   color: #fcf9f9;
   font-weight: 500;
   font-size: 1.2em;
 }
+.beranda .hero-desc .btn-primary:hover {
+  background-color: transparent;
+  border: 0.2em solid #ff960f;
+  color: #ff960f;
+  transition: ease-in-out 0.3s;
+}
+.beranda .hero-desc .btn-primary:active {
+  box-shadow: 0px 0px 7px 0px #fcf9f9;
+  transform: translateY(0.3em);
+}
 .beranda .hero-img {
   flex: 1 1 0px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.beranda .hero-img img {
+  width: 80%;
+  height: auto;
+  transform: rotate(-10deg);
 }
 
 .tentang {
   width: 100%;
-  padding: 2em 1.5em;
   position: relative;
 }
 .tentang .tentang-desc {
+  padding: 2em 1.5em;
   display: flex;
+  justify-content: center;
   gap: 1em;
 }
 .tentang .tentang-desc .img {
-  width: 100%;
-  height: 10em;
-  flex: 1 1 0px;
-  background-color: #00C6F1;
+  width: 60%;
+}
+.tentang .tentang-desc .img img {
   border-radius: 1em;
+  width: 100%;
+  height: auto;
+  max-height: 23.4em;
+  max-width: 29em;
 }
 .tentang .tentang-desc .desc {
-  flex: 1 1 0px;
+  width: 100%;
+  height: auto;
 }
 .tentang .tentang-desc .desc h4 {
   margin: 0.3em 0 0.1em 0;
-  color: #00C6F1;
+  color: #0085A2;
   font-weight: 600;
 }
 .tentang .tentang-desc .desc h3 {
@@ -118,24 +173,27 @@ button {
   color: #373737;
   text-align: justify;
   font-size: 0.93em;
+  width: 60%;
 }
 .tentang .unggulan {
   position: relative;
-  margin-top: 2.5em;
+  background-color: #021B79;
+  color: #fcf9f9;
+  padding: 2em 1.5em;
 }
 .tentang .unggulan .unggulan-title {
   text-align: center;
 }
 .tentang .unggulan .unggulan-title h3 {
   font-weight: 600;
-  color: #373737;
+  color: #ff960f;
   margin-bottom: 0.3em;
 }
 .tentang .unggulan .unggulan-title p {
-  color: #373737;
   font-size: 0.93em;
 }
 .tentang .unggulan .unggulan-desc {
+  margin-top: 1em;
   display: flex;
   justify-content: space-between;
   gap: 1em;
@@ -144,7 +202,7 @@ button {
   flex: 1 1 0px;
 }
 .tentang .unggulan .unggulan-desc .unggulan-item h4 {
-  color: #373737;
+  color: #ff960f;
   font-weight: 600;
   margin-bottom: 0.3em;
 }
@@ -160,7 +218,9 @@ button {
 }
 .tentang .unggulan .unggulan-desc .unggulan-item .img img {
   width: 20%;
-  height: 20%;
+  height: auto;
+  max-width: 4.6em;
+  max-height: 4.6em;
 }
 
 .harga {
@@ -168,13 +228,9 @@ button {
   padding: 2em 1.5em;
   background-color: #F1F1F1;
 }
-.harga .paket-list {
-  display: flex;
-  justify-content: center;
-  gap: 1em;
-}
 .harga .harga-title {
   text-align: center;
+  margin-bottom: 2em;
 }
 .harga .harga-title h3 {
   font-weight: 600;
@@ -185,45 +241,53 @@ button {
   color: #373737;
   font-size: 0.93em;
 }
-.harga .paket {
+.harga .paket-list {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+.harga .paket-list .paket {
+  flex: 1 1 0px;
   background-color: #fcf9f9;
   border-radius: 1em;
   position: relative;
+  box-shadow: 0px 0px 5px 0px #373737;
 }
-.harga .paket .paket-title {
+.harga .paket-list .paket .paket-title {
   padding: 0.7em 0em;
   text-align: center;
   background-color: #021B79;
   color: #fcf9f9;
   border-radius: 1em 1em 0 0;
 }
-.harga .paket .paket-main {
+.harga .paket-list .paket .paket-main {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 1.5em;
 }
-.harga .paket .paket-main .paket-global {
+.harga .paket-list .paket .paket-main .paket-global {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.harga .paket .paket-main .paket-global .paket-harga {
+.harga .paket-list .paket .paket-main .paket-global .paket-harga {
   position: relative;
   display: flex;
   gap: 0.3em;
   align-items: center;
 }
-.harga .paket .paket-main .paket-global .paket-harga h3 {
+.harga .paket-list .paket .paket-main .paket-global .paket-harga h3 {
   color: #021B79;
   font-size: 2em;
 }
-.harga .paket .paket-main .paket-global p {
+.harga .paket-list .paket .paket-main .paket-global p {
   color: #373737;
   font-size: 0.8em;
 }
-.harga .paket .paket-main .upto {
+.harga .paket-list .paket .paket-main .upto {
+  margin: 1em;
   position: relative;
   width: 7em;
   height: 7em;
@@ -234,49 +298,57 @@ button {
   align-items: center;
   border: 0.3em solid #021B79;
 }
-.harga .paket .paket-main .upto p {
+.harga .paket-list .paket .paket-main .upto p {
   color: #373737;
 }
-.harga .paket .paket-main .upto h4 {
+.harga .paket-list .paket .paket-main .upto h4 {
   color: #021B79;
   font-size: 2em;
 }
-.harga .paket .paket-main .upto h6 {
+.harga .paket-list .paket .paket-main .upto h6 {
   color: #373737;
   font-weight: 600;
   font-size: 0.8em;
 }
-.harga .paket .paket-main .divider {
+.harga .paket-list .paket .paket-main .divider {
   margin: 1em 0;
   width: 90%;
   border-top: 0.15em solid #021B79;
 }
-.harga .paket .paket-main .desc {
+.harga .paket-list .paket .paket-main .desc {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.8em;
 }
-.harga .paket .paket-main .desc li {
+.harga .paket-list .paket .paket-main .desc li {
   color: #021B79;
   font-weight: 600;
 }
-.harga .paket .paket-main .paket-pilih {
+.harga .paket-list .paket .paket-main .paket-pilih {
   width: 100%;
   display: flex;
   justify-content: center;
 }
-.harga .paket .paket-main .paket-pilih button {
-  margin: 0.7em 0;
-  background-color: orange;
-  padding: 0.7em 2em;
-  border: 0;
+.harga .paket-list .paket .paket-main .paket-pilih button {
+  margin-top: 1.5em;
+  border: 0.2em solid #ff960f;
+  background-color: #ff960f;
+  padding: 0.7em 3em;
   border-radius: 2em;
   color: #fcf9f9;
   font-weight: 500;
-  font-size: 1.2em;
-  display: block;
-  width: 90%;
+  font-size: 1em;
+}
+.harga .paket-list .paket .paket-main .paket-pilih button:hover {
+  background-color: transparent;
+  border: 0.2em solid #ff960f;
+  color: #ff960f;
+  transition: ease-in-out 0.3s;
+}
+.harga .paket-list .paket .paket-main .paket-pilih button:active {
+  box-shadow: 0px 0px 7px 0px #fcf9f9;
+  transform: translateY(0.3em);
 }
 
 .hubungi {
@@ -308,6 +380,17 @@ button {
   font-size: 2em;
   margin-top: 0.5em;
 }
+.hubungi .btn-bordered:hover {
+  border: 0.2em solid #ff960f;
+  color: #ff960f;
+  transition: ease-in-out 0.3s;
+}
+.hubungi .btn-bordered:active {
+  border: 0.2em solid #ff960f;
+  color: #ff960f;
+  box-shadow: 0px 0px 7px 0px #fcf9f9;
+  transform: translateY(0.3em);
+}
 
 footer .legal-wrap {
   padding: 1em 1.5em;
@@ -323,13 +406,23 @@ footer .legal-wrap .legal-disclaimer {
 }
 footer .legal-wrap .legal-disclaimer button {
   margin: 0.7em 0;
-  background-color: orange;
+  border: 0.2em solid #ff960f;
+  background-color: #ff960f;
   padding: 0.7em 2em;
-  border: 0;
   border-radius: 2em;
   color: #fcf9f9;
   font-weight: 500;
   font-size: 1.2em;
+}
+footer .legal-wrap .legal-disclaimer button:hover {
+  background-color: transparent;
+  border: 0.2em solid #ff960f;
+  color: #ff960f;
+  transition: ease-in-out 0.3s;
+}
+footer .legal-wrap .legal-disclaimer button:active {
+  box-shadow: 0px 0px 7px 0px #fcf9f9;
+  transform: translateY(0.3em);
 }
 footer .legal-wrap img {
   width: 50%;
