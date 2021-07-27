@@ -1,6 +1,5 @@
 document.addEventListener( 'DOMContentLoaded', function () {
     const tl = gsap.timeline()
-
     tl.from(".header", {y: -100, duration: 1.5, opacity: 0})
         .to(".header", {y: 0, ease: "elastic"})
 
