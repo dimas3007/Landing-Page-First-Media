@@ -5,13 +5,14 @@
     <title>First Media</title>
 
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/splide.min.css">
 
     <script type="text/javascript" src="./assets/js/live.js"></script>
 </head>
 <body>
     <section class="beranda">
         <header class="header">
-            <div class="brand">Branda</div>
+            <div class="brand">linknet</div>
             <ul class="nav-list">
                 <li class="nav-link">Beranda</li>
                 <li class="nav-link">Tentang</li>
@@ -22,15 +23,22 @@
             <button class="btn btn-bordered">Daftar Sekarang</button>
         </header>
         <div class="hero">
-            <div class="hero-desc">
-                <h1>First Media Reseller</h1>
-                <p>Subscribe to the real unlimited internet
-                    broadband and be rewarding, Enjoy the
-                    real worry-free internet.</p>
-                <button class="btn btn-primary">Pilih Sekarang</button>
-            </div>
-            <div class="hero-img">
-                <img src="./assets/images/First_Media_logo.svg.png" alt="">
+            <div class="carousel-wrap">
+                <div id="splide" class="splide">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide">
+                                <img src="https://placeimg.com/640/480/tech">
+                            </li>
+                            <li class="splide__slide">
+                                <img src="https://placeimg.com/640/480/tech">
+                            </li>
+                            <li class="splide__slide">
+                                <img src="https://placeimg.com/640/480/tech">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -38,7 +46,24 @@
     <section class="tentang">
         <div class="tentang-desc">
             <div class="img">
-                <img src="./assets/images/promo/7.jpg" alt="">
+                <div id="tentang" class="splide">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide">
+                                <img src="./assets/images/promo/3x.jpg">
+                            </li>
+                            <li class="splide__slide">
+                                <img src="./assets/images/promo/4x.jpg">
+                            </li>
+                            <li class="splide__slide">
+                                <img src="./assets/images/promo/8x.jpg">
+                            </li>
+                            <li class="splide__slide">
+                                <img src="./assets/images/promo/9x.jpg">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
             <div class="desc">
                 <h4>DI RUMAH AJA</h4>
@@ -352,6 +377,7 @@
 
     <script src="./assets/js/gsap.min.js"></script>
     <script src="./assets/js/ScrollTrigger.min.js"></script>
+    <script src="./assets/js/splide.min.js"></script>
     <script src="./assets/js/index.js"></script>
 </body>
 </html>
