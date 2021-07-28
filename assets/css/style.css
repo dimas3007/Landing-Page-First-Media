@@ -7,6 +7,10 @@
   font-family: "Montserrat", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 ul {
   list-style-type: none;
 }
@@ -17,6 +21,14 @@ button {
 
 .bg-white {
   background-color: #fcf9f9 !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 .beranda {
@@ -57,6 +69,7 @@ button {
 .beranda .header .nav-list .nav-link {
   cursor: pointer;
   font-weight: 500;
+  color: #fcf9f9;
 }
 .beranda .header .nav-list .nav-link:hover {
   color: #ff960f;
@@ -91,7 +104,7 @@ button {
   height: 100%;
 }
 .beranda .hero .carousel-wrap {
-  padding: 3em 3em;
+  padding: 1.3em 0;
 }
 .beranda .hero .carousel-wrap .splide__track {
   border-radius: 1em;

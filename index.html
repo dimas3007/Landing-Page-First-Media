@@ -7,19 +7,29 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/splide.min.css">
 
-    <script type="text/javascript" src="./assets/js/live.js"></script>
-    <script src="assets/js/data.js"></script>
+<!--    <script type="text/javascript" src="./assets/js/live.js"></script>-->
+    <script type="text/javascript" src="assets/js/data.js"></script>
 </head>
 <body>
-    <section class="beranda">
+    <section class="beranda" id="beranda">
         <header class="header">
             <div class="brand">linknet</div>
             <ul class="nav-list">
-                <li class="nav-link">Beranda</li>
-                <li class="nav-link">Tentang</li>
-                <li class="nav-link">Harga</li>
-                <li class="nav-link">Hubungi</li>
-                <li class="nav-link">Legal Disclaimer</li>
+                <li>
+                    <a href="#beranda" class="nav-link">Beranda</a>
+                </li>
+                <li>
+                    <a href="#tentangId" class="nav-link">Tentang</a>
+                </li>
+                <li>
+                    <a href="#harga" class="nav-link">Harga</a>
+                </li>
+                <li>
+                    <a href="#hubungi" class="nav-link">Hubungi</a>
+                </li>
+                <li>
+                    <a href="" class="nav-link">Legal Disclaimer</a>
+                </li>
             </ul>
             <button class="btn btn-bordered">Daftar Sekarang</button>
         </header>
@@ -29,13 +39,16 @@
                     <div class="splide__track">
                         <ul class="splide__list">
                             <li class="splide__slide">
-                                <img src="https://placeimg.com/640/480/tech">
+                                <img src="./assets/images/hero/1.jpg">
                             </li>
                             <li class="splide__slide">
-                                <img src="https://placeimg.com/640/480/tech">
+                                <img src="./assets/images/hero/2.jpg">
                             </li>
                             <li class="splide__slide">
-                                <img src="https://placeimg.com/640/480/tech">
+                                <img src="./assets/images/hero/3.jpg">
+                            </li>
+                            <li class="splide__slide">
+                                <img src="./assets/images/hero/4.jpg">
                             </li>
                         </ul>
                     </div>
@@ -44,7 +57,7 @@
         </div>
     </section>
 
-    <section class="tentang">
+    <section class="tentang" id="tentangId">
         <div class="tentang-desc">
             <div class="img">
                 <div id="tentang" class="splide">
@@ -109,7 +122,7 @@
         </div>
     </section>
 
-    <section class="harga harga-global">
+    <section class="harga harga-global" id="harga">
         <div class="harga-title">
             <h3>GLOBAL OFFERS</h3>
             <p>Harga Paket First Media Area Bandung Internet Plus TV Cable. Gratis
@@ -128,7 +141,7 @@
         </div>
     </section>
 
-    <section class="hubungi">
+    <section class="hubungi" id="hubungi">
         <h1>Tunggu apa lagi?</h1>
         <h3>Hubungi sales kami dan beralihlah ke First Media hari ini!</h3>
         <h5>Hadi Haryadi</h5>

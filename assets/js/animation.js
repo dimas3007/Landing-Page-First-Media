@@ -15,8 +15,8 @@ document.addEventListener( 'DOMContentLoaded', function () {
         }
     });
 
-    stTentang.from(".tentang-desc .img", {x: -1000, opacity: 0, duration: 1})
-    stTentang.from(".tentang-desc .desc", {x: 1000, opacity: 0, duration: .5})
+    stTentang.from(".tentang-desc .img", {x: -100, opacity: 0, duration: 1})
+    stTentang.from(".tentang-desc .desc", {x: 100, opacity: 0, duration: .5})
     stTentang.from(".unggulan-title", {y: 25, opacity: 0, duration: .5})
     stTentang.from(".unggulan-item", {y: 100, opacity: 0, duration: 1})
 
@@ -25,8 +25,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
         scrollTrigger: {
             trigger: ".unggulan",
             start: "bottom center",
-            end: "center top",
-            markers: true
+            end: "center top"
         }
     });
     stHarga.from(".harga-global .harga-title", {y: 25, opacity: 0, duration: .5})
@@ -36,8 +35,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
         scrollTrigger: {
             trigger: ".harga-global",
             start: "bottom center",
-            end: "center top",
-            markers: true
+            end: "center top"
         }
     });
     stHargaAttack.from(".harga-attack .harga-title", {y: 25, opacity: 0, duration: .5})
@@ -64,4 +62,6 @@ document.addEventListener( 'DOMContentLoaded', function () {
         autoplay: true,
         rewind: true
     }).mount()
+
+
 })

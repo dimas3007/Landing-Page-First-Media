@@ -15,6 +15,10 @@ $orange: #ff960f;
   font-family: 'Montserrat', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 ul {
   list-style-type: none;
 }
@@ -25,6 +29,14 @@ button{
 
 .bg-white{
   background-color: $white !important;
+}
+
+a{
+  text-decoration: none;
+}
+
+body{
+  overflow-x: hidden;
 }
 
 .beranda {
@@ -62,6 +74,7 @@ button{
       .nav-link{
         cursor: pointer;
         font-weight: 500;
+        color: $white;
         &:hover{
           color: $orange;
           transition: ease-in-out .3s;
@@ -97,7 +110,7 @@ button{
     width: 100%;
     height: 100%;
     .carousel-wrap{
-      padding: 3em 3em;
+      padding: 1.3em 0;
       .splide__track{
         border-radius: 1em;
       }
