@@ -10,8 +10,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
         scrollTrigger: {
             trigger: ".hero",
             start: "bottom center",
-            end: "center top",
-            markers: true
+            end: "center top"
         }
     });
 
