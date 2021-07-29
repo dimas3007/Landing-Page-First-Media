@@ -27,7 +27,7 @@ const data = {
                         tv: '97 Channel',
                         desc: '3 Bulan Open All Channel',
                         harga: 'Rp. 341.550',
-                        harga_promo: 'Rp. 294.525',
+                        harga_promo: 'Rp. 308.825',
                     },
                     {
                         title: 'Combo Family Plus HD POP',
@@ -35,7 +35,7 @@ const data = {
                         tv: '97 Channel',
                         desc: '3 Bulan Open All Channel',
                         harga: 'Rp. 451.550',
-                        harga_promo: 'Rp. 404.525',
+                        harga_promo: 'Rp. 418.825',
                     },
                     {
                         title: 'Combo Elite X1 POP',
@@ -43,7 +43,7 @@ const data = {
                         tv: '97 Channel',
                         desc: '3 Bulan Open All Channel',
                         harga: 'Rp. 711.700',
-                        harga_promo: 'Rp. 575.850',
+                        harga_promo: 'Rp. 590.150',
                     },
                     {
                         title: 'Combo Supreme X1 POP',
@@ -51,7 +51,7 @@ const data = {
                         tv: '97 Channel',
                         desc: '3 Bulan Open All Channel',
                         harga: 'Rp. 1.052.700',
-                        harga_promo: 'Rp. 831.600',
+                        harga_promo: 'Rp. 845.900',
                     }
                 ],
             discount: '15%',
@@ -64,7 +64,7 @@ const data = {
                     tv: '97 Channel',
                     desc: '3 Bulan Open All Channel',
                     harga: 'Rp. 341.550',
-                    harga_promo: 'Rp. 247.500',
+                    harga_promo: 'Rp. 261.800',
                 },
                 {
                     title: 'Combo Family Plus HD POP',
@@ -72,7 +72,7 @@ const data = {
                     tv: '97 Channel',
                     desc: '3 Bulan Open All Channel',
                     harga: 'Rp. 451.550',
-                    harga_promo: 'Rp. 357.500',
+                    harga_promo: 'Rp. 371.800',
                 },
                 {
                     title: 'Combo Elite X1 POP',
@@ -80,7 +80,7 @@ const data = {
                     tv: '97 Channel',
                     desc: '3 Bulan Open All Channel',
                     harga: 'Rp. 711.700',
-                    harga_promo: 'Rp. 548.680',
+                    harga_promo: 'Rp. 562.980',
                 },
                 {
                     title: 'Combo Supreme X1 POP',
@@ -88,7 +88,7 @@ const data = {
                     tv: '97 Channel',
                     desc: '3 Bulan Open All Channel',
                     harga: 'Rp. 1.052.700',
-                    harga_promo: 'Rp. 787.380',
+                    harga_promo: 'Rp. 801.680',
                 }
             ],
             discount: '30%',
@@ -183,7 +183,7 @@ const closeModals = () => {
 }
 
 const openModals = () => {
-    const e = document.getElementById('legal-page')
+        const e = document.getElementById('legal-page')
     e.classList.add('active')
 }
 
