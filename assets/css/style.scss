@@ -37,6 +37,7 @@ a{
 
 body{
   overflow-x: hidden;
+  position: relative;
 }
 
 .beranda {
@@ -71,6 +72,7 @@ body{
     .nav-list{
       display: flex;
       gap: 2em;
+      align-items: center;
       .nav-link{
         cursor: pointer;
         font-weight: 500;
@@ -225,6 +227,7 @@ body{
       font-size: .93em;
     }
   }
+
   .paket-list{
     display: flex;
     justify-content: center;
@@ -428,3 +431,236 @@ footer{
     font-size: .8em;
   }
 }
+
+.legal-page{
+  width: 100%;
+  height: 100vh;
+  background-color: #3737378c;
+  z-index: 99999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  visibility: hidden;
+  transition: ease-in-out .3s;
+  &.active{
+    display: flex;
+    visibility: visible;
+    transition: ease-in-out .3s;
+  }
+  .modals{
+    width: 75%;
+    padding: 1em;
+    background: $white;
+    box-shadow: 0px 5px 30px 0px $black;
+    border-radius: 1em;
+    max-height: 75vh;
+    overflow-y: scroll;
+    position: relative;
+    .close{
+      position: fixed;
+      bottom: 15%;
+      right: 15%;
+      button{
+        padding: 1em 1.5em;
+        background-color: $orange;
+        color: $white;
+        border: unset;
+        border-radius: 2em;
+        box-shadow: 0px 5px 30px 0px $black;
+      }
+    }
+    .item{
+      margin: 1em .5em;
+      p{
+        text-align: justify;
+      }
+    }
+  }
+}
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .beranda{
+    height: auto;
+    padding: 0;
+  }
+  .header{
+    padding: .3em 1em;
+    background-color: transparent!important;
+    box-shadow: 0px 5px 30px 0px $black ;
+    .brand{
+      font-size: 1.2em!important;
+    }
+    .nav-list{
+      display: none!important;
+    }
+    .btn-bordered{
+      font-size: .6em!important;
+      padding: .7em 1.2em;
+      color: $white!important;
+      background-color: $orange!important;
+      border: .2em solid $orange!important;
+    }
+  }
+  .carousel-wrap{
+    padding: 0!important;
+    .splide__track{
+      border-radius: unset!important;
+    }
+  }
+
+  .tentang-desc{
+    flex-direction: column-reverse;
+    .img{
+      width: 100%!important;
+      .splide__track{
+        border-radius: .5em!important;
+      }
+    }
+  }
+
+  .unggulan-desc{
+    flex-direction: column;
+  }
+
+  .paket-list{
+    flex-direction: column;
+  }
+
+  .legal-wrap{
+    flex-direction: column-reverse;
+    img{
+      width: 100% !important;
+      height: auto!important;
+    }
+  }
+
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .beranda{
+    height: auto;
+    padding: 0;
+  }
+  .header{
+    padding: .3em 1em;
+    background-color: transparent!important;
+    box-shadow: 0px 5px 30px 0px $black;
+    .brand{
+      font-size: 1.2em!important;
+    }
+    .nav-list{
+      gap: 1em;
+      .nav-link{
+        font-size: .7em;
+      }
+    }
+    .btn-bordered{
+      font-size: .6em!important;
+      padding: .7em 1.2em;
+      color: $white!important;
+      background-color: $orange!important;
+      border: .2em solid $orange!important;
+    }
+  }
+  .carousel-wrap{
+    padding: 0!important;
+    .splide__track{
+      border-radius: unset!important;
+    }
+  }
+
+  .tentang-desc{
+    flex-direction: column-reverse;
+    .img{
+      width: 100%!important;
+      .splide__track{
+        border-radius: .5em!important;
+      }
+    }
+  }
+
+  .unggulan-desc{
+    flex-direction: column;
+  }
+
+  .paket-list{
+    flex-direction: column;
+  }
+
+  .legal-wrap{
+    flex-direction: column-reverse;
+    img{
+      width: 100% !important;
+      height: auto!important;
+    }
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 992px) {
+  .beranda{
+    height: 100vh;
+    padding: 1em 1.5em;
+  }
+  .header{
+    padding: 0;
+    box-shadow: unset;
+    .brand{
+      font-size: 2em!important;
+    }
+    .nav-list{
+      gap: 2em;
+      .nav-link{
+        font-size: 1em;
+      }
+    }
+    .btn-bordered{
+      font-size: 1em!important;
+      padding: .7em 1.2em;
+      color: $white!important;
+      background-color: transparent!important;
+      border: .2em solid $white!important;
+    }
+  }
+  .carousel-wrap{
+    padding: 1.3em 0!important;
+    .splide__track{
+      border-radius: 1em!important;
+    }
+  }
+
+  .tentang-desc{
+    flex-direction: row;
+    .img{
+      width: 40%!important;
+      .splide__track{
+        border-radius: 1em!important;
+      }
+    }
+  }
+
+  .unggulan-desc{
+    flex-direction: row;
+  }
+
+  .paket-list{
+    flex-direction: row;
+  }
+
+  .legal-wrap{
+    flex-direction: row;
+    img{
+      width: 50% !important;
+      height: 50%!important;
+    }
+  }
+}
+

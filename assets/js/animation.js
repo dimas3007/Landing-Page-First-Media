@@ -61,6 +61,4 @@ document.addEventListener( 'DOMContentLoaded', function () {
         autoplay: true,
         rewind: true
     }).mount()
-
-
 })

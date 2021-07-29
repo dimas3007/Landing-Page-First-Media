@@ -130,7 +130,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
                             <li>${item.desc}</li>
                         </ul>
                         <div class="paket-pilih">
-                            <button>Pilih Sekarang</button>
+                            <button onclick="sendWhatsapp('${item.title}')">Daftar Paket</button>
                         </div>
                     </div>
                 </div>`
@@ -159,9 +159,32 @@ document.addEventListener("DOMContentLoaded", function(event) {
                             <li>${item.desc}</li>
                         </ul>
                         <div class="paket-pilih">
-                            <button>Pilih Sekarang</button>
+                            <button onclick="sendWhatsapp('${item.title}')">Daftar Paket</button>
                         </div>
                     </div>
                 </div>`
     })
 });
+
+const sendWhatsapp = (chat) => {
+    console.log(chat)
+    let url = 'https://api.whatsapp.com/send?phone=6283108867883&text='
+    if (!chat) {
+        url = `${url}Halo%20admin.%20Saya%20mau%20bertanya%20tentang%20First%20Media%20Purwakarta/Cikampek`
+    } else {
+        url = `${url}Halo admin. Saya mau berlangganan first media Paket ${chat}`
+    }
+    window.open(url)
+}
+
+const closeModals = () => {
+    const e = document.getElementById('legal-page')
+    e.classList.remove('active')
+}
+
+const openModals = () => {
+    const e = document.getElementById('legal-page')
+    e.classList.add('active')
+}
+
+
