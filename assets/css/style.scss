@@ -55,18 +55,9 @@ body{
     justify-content: space-between;
     align-items: center;
     .brand{
-      font-family: 'Nunito', sans-serif;
-      font-weight: bold;
-      font-size: 2em;
-      cursor: pointer;
-      color: $orange;
-      &:hover{
-        color: $white;
-        transition: ease-in-out .3s;
-      }
-      &:active{
-        color: $white;
-        transform: translateY(.3em);
+      img{
+        width: 5em;
+        height: auto;
       }
     }
     .nav-list{
@@ -494,7 +485,10 @@ footer{
     background-color: transparent!important;
     box-shadow: 0px 5px 30px 0px $black ;
     .brand{
-      font-size: 1.2em!important;
+      img{
+        width: 3em!important;
+        height: auto;
+      }
     }
     .nav-list{
       display: none!important;
@@ -554,7 +548,10 @@ footer{
     background-color: transparent!important;
     box-shadow: 0px 5px 30px 0px $black;
     .brand{
-      font-size: 1.2em!important;
+      img{
+        width: 3em!important;
+        height: auto;
+      }
     }
     .nav-list{
       gap: 1em;
@@ -614,7 +611,10 @@ footer{
     padding: 0;
     box-shadow: unset;
     .brand{
-      font-size: 2em!important;
+      img{
+        width: 5em;
+        height: auto;
+      }
     }
     .nav-list{
       gap: 2em;

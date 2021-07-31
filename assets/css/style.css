@@ -48,20 +48,9 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-.beranda .header .brand {
-  font-family: "Nunito", sans-serif;
-  font-weight: bold;
-  font-size: 2em;
-  cursor: pointer;
-  color: #ff960f;
-}
-.beranda .header .brand:hover {
-  color: #fcf9f9;
-  transition: ease-in-out 0.3s;
-}
-.beranda .header .brand:active {
-  color: #fcf9f9;
-  transform: translateY(0.3em);
+.beranda .header .brand img {
+  width: 5em;
+  height: auto;
 }
 .beranda .header .nav-list {
   display: flex;
@@ -482,8 +471,9 @@ footer .footer {
     background-color: transparent !important;
     box-shadow: 0px 5px 30px 0px #373737;
   }
-  .header .brand {
-    font-size: 1.2em !important;
+  .header .brand img {
+    width: 3em !important;
+    height: auto;
   }
   .header .nav-list {
     display: none !important;
@@ -541,8 +531,9 @@ footer .footer {
     background-color: transparent !important;
     box-shadow: 0px 5px 30px 0px #373737;
   }
-  .header .brand {
-    font-size: 1.2em !important;
+  .header .brand img {
+    width: 3em !important;
+    height: auto;
   }
   .header .nav-list {
     gap: 1em;
@@ -602,8 +593,9 @@ footer .footer {
     padding: 0;
     box-shadow: unset;
   }
-  .header .brand {
-    font-size: 2em !important;
+  .header .brand img {
+    width: 5em;
+    height: auto;
   }
   .header .nav-list {
     gap: 2em;
